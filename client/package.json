@@ -1,5 +1,9 @@
 {
-  "name": "WebChat",
+  "name": "KonverseWeb",
+  "dependencies": {
+	"socket.io": "^1.2.1"
+  },
+
   "devDependencies": {
     "browserify": "^4.1.9",
     "coffeeify": "^0.6.0",

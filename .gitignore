@@ -10,3 +10,4 @@ client/build/
 client/node_modules/
 client/sync.sh
 
+*.log
