@@ -1,0 +1,12 @@
+# Server stuff
+node_modules/
+sync.sh
+
+.idea/
+
+#Client side stuff
+client/bower_components/
+client/build/
+client/node_modules/
+client/sync.sh
+

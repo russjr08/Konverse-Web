@@ -1,0 +1,58 @@
+html, body {
+	background-color: #757575;
+}
+
+.content {
+	margin-top: 70px;
+}
+
+.user {
+	background-color: #212121;
+	color: #FAFAFA;
+}
+
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.important {
+	background-color: #D32F2F !important;
+}
+
+.message {
+    background-color: #424242;
+    color: white;
+
+    /*width: 80%;*/
+
+    padding: 10px;
+}
+
+.message a {
+	color: #2196F3;
+}
+
+#messagebox {
+	height: 80%;
+	overflow: auto;
+}
+
+#inputbox {
+	position: fixed;
+	width: 100%;
+	margin-bottom: 20%;
+}
+
+#inputbox label {
+	color: white;
+}
+
+#inputbox md-text-float {
+	width: 100%;
+}
+
+#inputbox input {
+	width: 100%;
+	color: white;
+}

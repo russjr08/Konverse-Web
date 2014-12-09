@@ -1,0 +1,29 @@
+{
+  "name": "WebChat",
+  "version": "0.1.1",
+  "authors": [
+    "Russell Richardson <Russell@KronosAD.com>"
+  ],
+  "description": "A chat web app",
+  "main": "index.html",
+  "keywords": [
+    "Chat"
+  ],
+  "license": "MIT",
+  "homepage": "http://chat.kronosad.com/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "master",
+    "socket.io-client": "~1.2.1",
+    "polymer": "Polymer/polymer#~0.5.1",
+    "core-drawer-panel": "Polymer/core-drawer-panel#~0.5.1",
+    "core-icon-button": "Polymer/core-icon-button#~0.5.1"
+  }
+}

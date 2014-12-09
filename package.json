@@ -1,0 +1,18 @@
+{
+  "name": "KonverseWeb",
+  "version": "1.0.0",
+  "description": "A web alternate version of Konverse",
+  "main": "server.coffee",
+  "dependencies": {
+    "request": "^2.49.0",
+    "socket.io": "^1.2.1"
+  },
+  "devDependencies": {
+    "socket.io": "^1.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Russell Richardson <Russell@KronosAD.com>",
+  "license": "ISC"
+}

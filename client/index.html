@@ -1,0 +1,91 @@
+<html>
+
+	<head>
+		<title>Konverse</title>
+
+		<link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+
+		<!-- Extra themes -->
+		<link rel="stylesheet" href="bower_components/angular-material/themes/green-theme.css">
+
+		<link rel="stylesheet" type="text/css" href="assets/style.css" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+		<!-- Support for Chrome 39 / Lollipop's colored toolbar and hi-res icon thingy -->
+		<meta name="theme-color" content="#4caf50">
+		<link rel="icon" sizes="192x192" href="img/icon.png">
+
+		<link rel="icon" type="image/png" href="img/icon.png">
+
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<!-- // <script src="//localhost:1337/livereload.js"></script> -->
+
+		<script src="bower_components/socket.io-client/socket.io.js"></script>
+
+		<script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+
+		<link rel="import" href="/bower_components/polymer/polymer.html">
+		<link rel="import" href="/bower_components/core-drawer-panel/core-drawer-panel.html">
+		<link rel="import" href="/bower_components/core-icon-button/core-icon-button.html">
+
+
+		<script src="/bower_components/angular/angular.js"></script>
+	    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+	    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+	    <script src="/bower_components/hammerjs/hammer.js"></script>
+	    <script src="/bower_components/angular-material/angular-material.js"></script>
+	    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+	    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-sanitize.js"></script>
+
+	    <script src="/assets/js/jquery.cookie.js"></script>
+	    <script src="/assets/js/AuthLib.js"></script>
+
+	    <script src="build/main.js"></script>
+	</head>
+
+	<body ng-app="ChatApp">
+
+		<!-- Homepage contents -->
+		<div ng-controller="HomeController" id="home">
+
+			<md-toolbar md-scroll-shrink md-theme="green">
+			    <div class="md-toolbar-tools">
+			      <h3>
+					  <core-icon-button icon="menu" onclick="document.getElementById('drawer').togglePanel()"></core-icon-button>
+					  <span>Konverse (Web) {{version}} <small>Logged in as {{username}}</small></span>
+			      </h3>
+			    </div>
+			</md-toolbar>
+
+			<core-drawer-panel rightDrawer id="drawer">
+				<div drawer class="content sidebar">
+					<md-card class="user" ng-repeat="user in users">
+						<span class="centered" style="color: {{user.color}}">{{user.name}}</span>
+					</md-card>
+				</div>
+
+				<div main>
+					<div id="messagebox" class="content">
+						<md-card class="message" ng-repeat="message in messages" ng-class="getMessageClasses(message)">
+							(<span style="color: {{message.color}}">{{message.user}}</span>) <span ng-bind-html="message.message | linky"></span>
+						</md-card>
+					</div>
+					<div id="inputbox" layout="row">
+						<md-text-float md-theme="green" id="inputcomponent" style="width: 100%" ng-model="input" label="Type your message here!"></md-text-float>
+					</div>
+				</div>
+
+
+			</core-drawer-panel>
+
+
+
+		</div>
+
+	</body>
+
+</html>

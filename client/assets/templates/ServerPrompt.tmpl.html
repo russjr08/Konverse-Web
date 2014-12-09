@@ -1,0 +1,16 @@
+<md-dialog>
+
+	<md-content>
+		<h3>Where would you like to connect to?</h3>
+
+		<md-text-float label="Server Address/IP" ng-model="server"></md-text-float>
+		<md-text-float label="Port" ng-model="port"></md-text-float>
+	</md-content>
+	
+
+	<div class="md-actions" layout="row">
+		<md-button ng-click="done()" class="md-primary">
+			Connect!
+		</md-button>
+	</div>
+</md-dialog>
