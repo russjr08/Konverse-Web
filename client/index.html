@@ -71,7 +71,7 @@
 				<div main>
 					<div id="messagebox" class="content">
 						<md-card class="message" ng-repeat="message in messages" ng-class="getMessageClasses(message)">
-							(<span style="color: {{message.color}}">{{message.user}}</span>) <span ng-bind-html="message.message | linky"></span>
+							(<span style="color: {{message.color}}">{{message.user}}</span>) <span ng-bind-html="message.message | linky:'_blank'"></span>
 						</md-card>
 					</div>
 					<div id="inputbox" layout="row">
